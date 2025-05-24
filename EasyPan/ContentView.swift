@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  EasyPan
-//
-//  Created by Hari's Mac on 25.05.2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
