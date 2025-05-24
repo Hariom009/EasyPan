@@ -45,6 +45,11 @@
 			path = EasyPanUITests;
 			sourceTree = "<group>";
 		};
+		BF0F574C2DE28D4E0059DEAF /* App Screens  */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "App Screens ";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				BF0F56D92DE27CC50059DEAF /* EasyPan */,
-				BF0F56E72DE27CC60059DEAF /* EasyPanTests */,
-				BF0F56F12DE27CC60059DEAF /* EasyPanUITests */,
 				BF0F56D82DE27CC50059DEAF /* Products */,
+				BF0F574C2DE28D4E0059DEAF /* App Screens  */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +92,8 @@
 				BF0F56D72DE27CC50059DEAF /* EasyPan.app */,
 				BF0F56E42DE27CC60059DEAF /* EasyPanTests.xctest */,
 				BF0F56EE2DE27CC60059DEAF /* EasyPanUITests.xctest */,
+				BF0F56F12DE27CC60059DEAF /* EasyPanUITests */,
+				BF0F56E72DE27CC60059DEAF /* EasyPanTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +115,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				BF0F56D92DE27CC50059DEAF /* EasyPan */,
+				BF0F574C2DE28D4E0059DEAF /* App Screens  */,
 			);
 			name = EasyPan;
 			packageProductDependencies = (

@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var searchtext: String = "Seach recipes, ingredients..."
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            SearchBarView(seachtext: searchtext)
+            VStack{
+                HStack{
+                    Text("Most Popular Recipes")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                .padding(4)
+                
+            }
+        }
     }
 }
 
