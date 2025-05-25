@@ -7,31 +7,45 @@
 
 import SwiftUI
 
-struct ImageView: View {
-    var text: String
-    var time : Int
+struct RecipeCardView: View {
+    let imageName: String
+    let title: String
+    let time: String
+
     var body: some View {
-            ScrollView{
-                ZStack{
-                    Image("\(text)")
-                        .resizable()
-                        .frame(width: 400,height: 500)
-                    VStack(alignment: .leading, spacing: 12){
-                        Spacer()
-                        HStack(spacing: 12){
-                            Text("\(text)")
-                                .font(.system(size: 35,weight: .semibold))
-                            Spacer()
-                        }
-                        Text("Ready in \(time) mins")
-                            .font(.system(size: 15))
-                    }
-                    .padding(10)
-                }
+        ZStack(alignment: .bottomLeading) {
+            Image(imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 200)
+                .clipped()
+            
+            // Gradient overlay
+            LinearGradient(
+                gradient: Gradient(colors: [Color.black.opacity(0.7), Color.clear]),
+                startPoint: .bottom,
+                endPoint: .top
+            )
+            .frame(height: 80)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.title3)
+                    .bold()
+                    .foregroundColor(.white)
+                Text("Ready in \(time)")
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.8))
             }
+            .padding()
+        }
+        .frame(width: 300, height: 200)
+        .cornerRadius(20)
+        .shadow(radius: 5)
     }
 }
 
+
 #Preview {
-    ImageView(text: "Default", time: 20)
+    RecipeCardView(imageName: "Default", title: "Default", time: "20")
 }
