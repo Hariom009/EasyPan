@@ -32,7 +32,7 @@ struct RecipeCardView: View {
                     .font(.title3)
                     .bold()
                     .foregroundColor(.white)
-                Text("Ready in \(recipe.cookingTime)")
+                Text("Ready in \(recipe.cookingTime) min")
                     .font(.subheadline)
                     .foregroundColor(.white.opacity(0.8))
             }
