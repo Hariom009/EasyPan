@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct RecipeCardView: View {
-    let imageName: String
-    let title: String
-    let time: String
+    let recipe:Recipe
+
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image(imageName)
+            Image(recipe.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 300, height: 200)
@@ -29,11 +28,11 @@ struct RecipeCardView: View {
             .frame(height: 80)
             
             VStack(alignment: .leading, spacing: 4) {
-                Text(title)
+                Text(recipe.title)
                     .font(.title3)
                     .bold()
                     .foregroundColor(.white)
-                Text("Ready in \(time)")
+                Text("Ready in \(recipe.cookingTime)")
                     .font(.subheadline)
                     .foregroundColor(.white.opacity(0.8))
             }
@@ -47,5 +46,5 @@ struct RecipeCardView: View {
 
 
 #Preview {
-    RecipeCardView(imageName: "Default", title: "Default", time: "20")
+    RecipeCardView(recipe: Recipe(title: "Sample", description: "Sample data", imageName: "default", cookingTime: 10, difficulty: "medium", category: "5-minute meals", ingredients: [""], steps: [""]))
 }

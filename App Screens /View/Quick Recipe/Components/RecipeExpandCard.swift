@@ -54,6 +54,6 @@ struct RecipeExpandCard: View {
         }
 }
 
-#Preview {
-    RecipeCardView(imageName: "Red sauce pasta", title: "Pasta", time: "15 mins")
-}
+//#Preview {
+//    RecipeCardView(imageName: "Red sauce pasta", title: "Pasta", time: "15 mins")
+//}

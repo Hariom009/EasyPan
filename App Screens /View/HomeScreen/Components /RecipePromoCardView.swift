@@ -15,9 +15,9 @@ struct RecipePromoCardView: View {
     @State private var isNavigating = false
 
     var body: some View {
-        NavigationLink(destination: RecipeCategoryListView(
+        NavigationLink(destination: CategoryView(
             category: category,
-            recipes: RecipeCategoryListView.getSampleRecipes(for: category)
+            recipes: CategoryView.getSampleRecipes(for: category)
         ), isActive: $isNavigating) {
             HStack(spacing: 12) {
                 // Image Section
@@ -44,10 +44,6 @@ struct RecipePromoCardView: View {
                         .lineLimit(2)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-
-                // Arrow
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.gray)
             }
             .padding()
             .background(Color.white)

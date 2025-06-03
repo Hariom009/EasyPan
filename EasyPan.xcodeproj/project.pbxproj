@@ -30,6 +30,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BF01CFCD2DEEBAB500016479 /* SampleRecipes */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SampleRecipes;
+			sourceTree = "<group>";
+		};
 		BF0F56D92DE27CC50059DEAF /* EasyPan */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = EasyPan;
@@ -80,6 +85,7 @@
 		BF0F56CE2DE27CC50059DEAF = {
 			isa = PBXGroup;
 			children = (
+				BF01CFCD2DEEBAB500016479 /* SampleRecipes */,
 				BF0F56D92DE27CC50059DEAF /* EasyPan */,
 				BF0F56D82DE27CC50059DEAF /* Products */,
 				BF0F574C2DE28D4E0059DEAF /* App Screens  */,
@@ -114,6 +120,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				BF01CFCD2DEEBAB500016479 /* SampleRecipes */,
 				BF0F56D92DE27CC50059DEAF /* EasyPan */,
 				BF0F574C2DE28D4E0059DEAF /* App Screens  */,
 			);
