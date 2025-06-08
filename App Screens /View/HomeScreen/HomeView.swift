@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var searchtext: String = "Seach recipes, ingredients..."
+    @State var searchtext: String = ""
     let recipelist: [Recipe] = [
         Recipe(
             title: "Oreo Milkshake",
@@ -289,11 +289,13 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $path){
             ScrollView{
-                SearchBarView(seachtext: searchtext)
+                SearchBarView(searchtext: $searchtext)
                 SectionHeading(text: "Most Popular Recipes")
                 ScrollView(.horizontal){
                     HStack{
-                        ForEach(recipelist, id: \.self){ recipe in
+                        ForEach(recipelist.filter { recipe in
+                            searchtext.isEmpty || recipe.title.lowercased().contains(searchtext.lowercased())
+                        },id:\.self){ recipe in
                             RecipeCardView(recipe: recipe)
                                 .onTapGesture {
                                     path.append(recipe)
